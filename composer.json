@@ -1,0 +1,19 @@
+{
+    "name": "ojisatriani/fungsi",
+    "description": "fungsi populer",
+    "type": "library",
+    "license": "no",
+    "authors": [
+        {
+            "name": "oji satriani",
+            "email": "oji.satriani@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ojisatriani\\fungsi\\": "src/"
+        }
+    }
+}
