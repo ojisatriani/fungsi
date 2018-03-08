@@ -71,7 +71,7 @@ class fungsi
                 } //end switch case
     }
 
-    public function getBulan($bln, $romawi = false)
+    public function getBulan($bln)
     {
         switch ($bln) {
                     case 1:
@@ -227,25 +227,23 @@ class fungsi
         return slug($baru).".".strtolower(substr(strrchr($lama, '.'), 1));
     }
 
-    public function hapusFile($path, $namaFile, $tunggal = false)
+    public function hapusFile($path, $namaFile)
     {
         $path = $path .'/';
         if (!empty($namaFile)) {
             if (file_exists($path . $namaFile)) {
                 unlink($path . $namaFile);
             }
-            if (!$tunggal) {
-                $tipe = array("kecil", "thumb", "empatEnam", "sedang", "wide", "slide", "banner","avatar");
-                foreach ($tipe as $gbr) {
-                    if (file_exists($path . $gbr .'-'. $namaFile)) {
-                        unlink($path . $gbr .'-'. $namaFile);
-                    }
+            $tipe = array("kecil", "thumb", "empatEnam", "sedang", "wide", "slide", "banner","avatar");
+            foreach ($tipe as $gbr) {
+                if (file_exists($path . $gbr .'-'. $namaFile)) {
+                    unlink($path . $gbr .'-'. $namaFile);
                 }
             }
         }
     }
 
-    public function hapusFiletunggal($path, $namaFile)
+    public function hapusFileSatu($path, $namaFile)
     {
         $path = $path .'/';
         if (!empty($namaFile)) {

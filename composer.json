@@ -2,6 +2,7 @@
     "name": "ojisatriani/fungsi",
     "description": "fungsi populer",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "ojiSatriani",
