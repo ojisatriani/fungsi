@@ -4,7 +4,7 @@ namespace ojisatriani\fungsi;
 
 class fungsi
 {
-    private static $tanggal;
+    private $tanggal;
 
     public function __construct()
     {
