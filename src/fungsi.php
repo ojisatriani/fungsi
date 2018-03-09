@@ -258,7 +258,6 @@ class fungsi
     {
         $ipaddress = '';
         //($_SERVER['SERVER_NAME'])
-        //getenv('HTTP_CLIENT_IP')
         if (getenv('HTTP_CLIENT_IP')) {
             $ipaddress = getenv('HTTP_CLIENT_IP');
         } elseif (getenv('HTTP_X_FORWARDED_FOR')) {
@@ -276,5 +275,4 @@ class fungsi
         }
         return $ipaddress;
     }
-}//end class
-
+}
