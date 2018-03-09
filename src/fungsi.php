@@ -22,27 +22,27 @@ class fungsi
 
     public function tanggalIndonesia()
     {
-        return substr($this->tanggal, 8, 2).' '.$this->getBulan(substr($this->tanggal, 5, 2)).' '.substr($this->tanggal, 0, 4);
+        return substr($this->tanggal, 8, 2).' '.$this->getBulan().' '.substr($this->tanggal, 0, 4);
     }
 
     public function tanggalIndonesiaSingkat()
     {
-        return substr($this->tanggal, 8, 2).' '.substr($this->getBulan(substr($this->tanggal, 5, 2)), 0, 3).' '.substr($this->tanggal, 0, 4);
+        return substr($this->tanggal, 8, 2).' '.substr($this->getBulan(), 0, 3).' '.substr($this->tanggal, 0, 4);
     }
 
     public function namaBulan()
     {
-        return $this->getBulan(substr($this->tanggal, 5, 2));
+        return $this->getBulan();
     }
 
     public function namaBulanSingkat()
     {
-        return substr($this->getBulan(substr($this->tanggal, 5, 2)), 0, 3);
+        return substr($this->getBulan(), 0, 3);
     }
 
-    public function getHari($hari)
+    public function getHari()
     {
-        $hari = date('N', strtotime($hari));
+        $hari = date('N', strtotime($this->tanggal));
         switch ($hari) {
                     case 0:
                         return "Minggu";
@@ -71,9 +71,10 @@ class fungsi
                 } //end switch case
     }
 
-    public function getBulan($bln)
+    public function getBulan()
     {
-        switch ($bln) {
+        $bulan = substr($this->tanggal, 5, 2);
+        switch ($bulan) {
                     case 1:
                         return "Januari";
                         break;
@@ -117,7 +118,7 @@ class fungsi
     {
         for ($i=1; $i<=31; $i++) {
             $nilai = strlen($i) == 1 ? '0' . $i:$i;
-            $tgl[$nilai] = $i;
+            $tgl[$i] = $nilai;
         }
         return $tgl;
     }
