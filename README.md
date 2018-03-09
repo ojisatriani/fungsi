@@ -4,6 +4,11 @@ fungsi oji
 Instalation
 ----
 
+Via composer:
+```
+composer require ojisatriani/fungsi
+```
+
 Manual composer.json in require section:
 ```
 "require": {
