@@ -1,5 +1,5 @@
 {
-    "name": "ojisatriani/fungsi",
+    "name": "OjiSatriani/Fungsi",
     "description": "fungsi populer",
     "type": "library",
     "license": "MIT",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ojisatriani\\fungsi\\": "src/"
+            "OjiSatriani\\": "src/"
         }
     }
 }
