@@ -20,20 +20,25 @@ Basic Usage:
 ----
 
 ```$php
-use ojisatriani\fungsi\fungsi;
+use OjiSatriani\Fungsi;
 
-$fungsi     = new fungsi;
-$tanggal    = $fungsi->tanggalSekarang(); // 2018-03-09
-$fungsi->setTanggal($tanggal);
-$fungsi->tanggalIndonesia(); // 09 Maret 2018
-$fungsi->tanggalIndonesiaSingkat(); // 09 Mar 2018
-$fungsi->namaBulan(); // Maret
-$fungsi->namaBulanSingkat(); // Mar
-$fungsi->getHari(); // Jum'at
-$fungsi->getBulan(); // Maret
-$fungsi->arrayHari(); // array(01-31)
-$fungsi->arrayBulan(); // array('Januari'-'Desember')
-$fungsi->arrayTahun(1970,2018); // array(1970 -2018)
+//tanggal populer indonesia
+$tanggal = Fungsi::setTanggal();
+$tanggal->tanggalSekarang(); // 2018-03-09
+$tanggal->tanggalIndonesia(); // 09 Maret 2018
+$tanggal->setTanggal('2018-03-9');
+$tanggal->tanggalIndonesia(); // 09 Maret 2018
+$tanggal->tanggalIndonesiaSingkat(); // 09 Mar 2018
+$tanggal->namaBulan(); // Maret
+$tanggal->namaBulanSingkat();  // Mar
+$tanggal->getHari(); // Jum'at
+$tanggal->getBulan(); // Maret
+$tanggal->arrayHari(); // array(01-31)
+$tanggal->arrayBulan(); // array('Januari'-'Desember')
+$tanggal->arrayTahun(1970,2018); // array(1970 -2018)
+
+//kebutuhan lainnya
+$fungsi = new Fungsi;
 $fungsi->romawi(25); // XXV
 $fungsi->autolink('ini ada link http://www.google.com'); // ini adalah link <a href="http://www.google.com">http://www.google.com</a>
 $fungsi->terbilang(50000); // Lima Puluh Ribu
