@@ -33,9 +33,10 @@ $tanggal->namaBulan(); // Maret
 $tanggal->namaBulanSingkat();  // Mar
 $tanggal->getHari(); // Jum'at
 $tanggal->getBulan(); // Maret
-$tanggal->arrayHari(); // array(01-31)
-$tanggal->arrayBulan(); // array('Januari'-'Desember')
-$tanggal->arrayTahun(1970,2018); // array(1970 -2018)
+$tanggal->arrayHari(); // array() [01] - [31]
+$tanggal->arrayBulan(); // array() ['Januari'] - ['Desember']
+$tanggal->arrayTahun(1970,2018); // array() [1970] - [2018]
+$tanggal->waktu(); //return array() [tahun] [bulan] [hari] [jam] [menit] [detik]
 
 //kebutuhan lainnya
 $fungsi = new Fungsi;
