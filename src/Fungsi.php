@@ -164,11 +164,11 @@ class Fungsi
     {
         $waktu = [
             'tahun' => $this->arrayTahun(),
-            'bulan' => $this->arrayBullan(),
+            'bulan' => $this->arrayBulan(),
             'hari'  => $this->arrayHari(),
             'jam'   => $this->arrayJam(),
-            'menit' => $this->arrayMenit(),
-            'detik' => $this->arrayDetikt(),
+            'menit' => $this->arrayMenitDetik(),
+            'detik' => $this->arrayMenitDetik(),
         ];
         return $waktu;
     }
