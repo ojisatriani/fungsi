@@ -135,11 +135,42 @@ class Fungsi
 
     public function arrayTahun($mulai=1970, $habis = null)
     {
-        $to =$end == null ? date("Y"):$habis;
+        $to =$habis == null ? date("Y"):$habis;
         for ($a=$to;$a>=$mulai;$a--) {
             $tahun[$a] =$a;
         }
         return $tahun;
+    }
+
+    public function arrayJam()
+    {
+        for ($i=0; $i<=23; $i++) {
+            $nilai = strlen($i) == 1 ? '0' . $i:$i;
+            $waktu[$i] = $nilai;
+        }
+        return $waktu;
+    }
+
+    public function arrayMenitDetik()
+    {
+        for ($i=0; $i<=60; $i++) {
+            $nilai = strlen($i) == 1 ? '0' . $i:$i;
+            $waktu[$i] = $nilai;
+        }
+        return $waktu;
+    }
+
+    public function arrayWaktu()
+    {
+        $waktu = [
+            'tahun' => $this->arrayTahun(),
+            'bulan' => $this->arrayBullan(),
+            'hari'  => $this->arrayHari(),
+            'jam'   => $this->arrayJam(),
+            'menit' => $this->arrayMenit(),
+            'detik' => $this->arrayDetikt(),
+        ];
+        return $waktu;
     }
 
     function romawi($integer)
