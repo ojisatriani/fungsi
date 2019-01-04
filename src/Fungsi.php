@@ -261,7 +261,7 @@ class Fungsi
     
     public function namaBaru($lama, $baru)
     {
-        return slug($baru).".".strtolower(substr(strrchr($lama, '.'), 1));
+        return $this->slug($baru).".".strtolower(substr(strrchr($lama, '.'), 1));
     }
 
     public function hapusFile($path, $namaFile)
