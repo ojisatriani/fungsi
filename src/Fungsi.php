@@ -451,4 +451,31 @@ class Fungsi
             ' '    => ["\xC2\xA0", "\xE2\x80\x80", "\xE2\x80\x81", "\xE2\x80\x82", "\xE2\x80\x83", "\xE2\x80\x84", "\xE2\x80\x85", "\xE2\x80\x86", "\xE2\x80\x87", "\xE2\x80\x88", "\xE2\x80\x89", "\xE2\x80\x8A", "\xE2\x80\xAF", "\xE2\x81\x9F", "\xE3\x80\x80"],
         ];
     }
+    
+    //konversi Nomor Induk Pegawai
+    public function nip($nip, $batas = " ") {
+        $nip        = trim($nip," ");
+        $panjang    = strlen($nip);
+        
+        if($panjang == 18) {
+            $sub[]  = substr($nip, 0, 8); // tanggal lahir
+            $sub[]  = substr($nip, 8, 6); // tanggal pengangkatan
+            $sub[]  = substr($nip, 14, 1); // jenis kelamin
+            $sub[]  = substr($nip, 3, 3); // nomor urut
+            
+            return $sub[0].$batas.$sub[1].$batas.$sub[2].$batas.$sub[3];
+        } elseif($panjang == 15) {
+            $sub[]  = substr($nip, 0, 8); // tanggal lahir
+            $sub[]  = substr($nip, 8, 6); // tanggal pengangkatan
+            $sub[]  = substr($nip, 14, 1); // jenis kelamin
+            
+            return $sub[0].$batas.$sub[1].$batas.$sub[2];
+        } elseif($panjang == 9) {
+            $sub    = str_split($nip,3);
+            
+            return $sub[0].$batas.$sub[1].$batas.$sub[2];
+        } else {
+            return $nip;
+        }
+    }
 }
