@@ -45,4 +45,6 @@ $fungsi->autolink('ini ada link http://www.google.com'); // ini adalah link <a h
 $fungsi->terbilang(50000); // Lima Puluh Ribu
 $fungsi->slug('ini adalah permalink','-'); // ini-adalah-permalink
 $fungsi->alamatIp(); // 192.168.1.5
+$fungsi->nip(197005182005031005); // 19700518 200503 1 005
+$fungsi->nip(197005182005031005,'.'); // 19700518.200503.1.005
 ```
