@@ -461,7 +461,7 @@ class Fungsi
             $sub[]  = substr($nip, 0, 8); // tanggal lahir
             $sub[]  = substr($nip, 8, 6); // tanggal pengangkatan
             $sub[]  = substr($nip, 14, 1); // jenis kelamin
-            $sub[]  = substr($nip, 3, 3); // nomor urut
+            $sub[]  = substr($nip, 15, 3); // nomor urut
             
             return $sub[0].$batas.$sub[1].$batas.$sub[2].$batas.$sub[3];
         } elseif($panjang == 15) {
