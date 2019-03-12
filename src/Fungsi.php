@@ -45,9 +45,9 @@ class Fungsi
         return date("Y", strtotime(self::$tanggal));
     }
 
-    public function bulanTahun($singkat = FALSE)
+    public function bulanTahun($singkat = false)
     {
-        return $singkat ==FALSE ? $this->namaBulan() . ' ' . $this->namaTahun():$this->namaBulanSingkat() . ' ' . $this->namaTahun();
+        return $singkat == false ? $this->namaBulan() . ' ' . $this->namaTahun():$this->namaBulanSingkat() . ' ' . $this->namaTahun();
     }
 
     public function namaBulanSingkat()

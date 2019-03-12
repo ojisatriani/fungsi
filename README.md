@@ -30,6 +30,9 @@ $tanggal->setTanggal('2018-03-9');
 $tanggal->tanggalIndonesia(); // 09 Maret 2018
 $tanggal->tanggalIndonesiaSingkat(); // 09 Mar 2018
 $tanggal->namaBulan(); // Maret
+$tanggal->namaTahun(); // 2018
+$tanggal->bulanTahun(); // Maret 2018
+$tanggal->bulanTahun(true); // Mar 2018
 $tanggal->namaBulanSingkat();  // Mar
 $tanggal->getHari(); // Jum'at
 $tanggal->getBulan(); // Maret
