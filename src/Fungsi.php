@@ -40,6 +40,16 @@ class Fungsi
         return $this->getBulan();
     }
 
+    public function namaTahun()
+    {
+        return date("Y", strtotime(self::$tanggal));
+    }
+
+    public function bulanTahun($singkat = FALSE)
+    {
+        return $singkat ==FALSE ? $this->namaBulan() . ' ' . $this->namaTahun():$this->namaBulanSingkat() . ' ' . $this->namaTahun();
+    }
+
     public function namaBulanSingkat()
     {
         return substr($this->getBulan(), 0, 3);
