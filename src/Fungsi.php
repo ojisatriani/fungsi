@@ -138,9 +138,13 @@ class Fungsi
         return $tgl;
     }
 
-    public function arrayBulan()
+    public function arrayBulan($nol = true)
     {
-        return array("01"=>"Januari","02"=>"Februari","03"=>"Maret","04"=>"April","05"=>"Mei","06"=>"Juni","07"=>"July","08"=>"Agustus","09"=>"September","10"=>"Oktober","11"=>"November","12"=>"Desember");
+        if($nol == true){
+            return array("01"=>"Januari","02"=>"Februari","03"=>"Maret","04"=>"April","05"=>"Mei","06"=>"Juni","07"=>"July","08"=>"Agustus","09"=>"September","10"=>"Oktober","11"=>"November","12"=>"Desember");
+        } else {
+            return array(1=>"Januari",2=>"Februari",3=>"Maret",4=>"April",5=>"Mei",6=>"Juni",7=>"July",8=>"Agustus",9=>"September",10=>"Oktober",11=>"November",12=>"Desember");
+        }
     }
 
     public function arrayTahun($mulai=1970, $habis = null)
